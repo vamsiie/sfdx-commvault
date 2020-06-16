@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="">
+        <p class="slds-p-horizontal_small">
+            <lightning-input type="text" label="Enter Account Name" ></lightning-input><br/>
+            <lightning-button label="Search Accounts" onclick={handleLoad}></lightning-button>
+        </p>
+    </lightning-card>
+    <template if:true={data}>
+        <lightning-card  title="Search Results">
+            <p class="slds-p-horizontal_small">
+                <lightning-datatable data={data} columns={columns} key-field="id"></lightning-datatable>
+            </p>
+        </lightning-card>
+    </template>
+    
+</template>
